@@ -1,10 +1,12 @@
+@charset "UTF-8";
 /*---------------------------------------------------
 Main style for Cyril Ajieh Portfolio site
+-----------------------------------------------------
+Base Style
 -----------------------------------------------------*/
 /********************************************
 	Tag Resets
 ********************************************/
-
 body,
 div,
 h1,
@@ -37,55 +39,10 @@ hgroup,
 menu,
 nav,
 section {
-	margin: 0;
-	padding: 0;
-	border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
-/*==========================================
-	Web Fonts
-============================================*/
-@font-face {
-    font-family: 'Roboto Condensed Light';
-    src: url('../fonts/robotocondensed-light-webfont.eot');
-    src: url('../fonts/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotocondensed-light-webfont.woff') format('woff'),
-         url('../fonts/robotocondensed-light-webfont.ttf') format('truetype'),
-         url('../fonts/robotocondensed-light-webfont.svg#RobotoCondensedLight') format('svg');
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto Condensed bold';
-    src: url('../fonts/robotocondensed-bold-webfont.eot');
-    src: url('../fonts/robotocondensed-bond-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/robotocondensed-bold-webfont.woff') format('woff'),
-         url('../fonts/robotocondensed-bold-webfont.ttf') format('truetype'),
-         url('../fonts/robotocondensed-bold-webfont.svg#RobotoCondensedLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*============================================
-	Normalize CSS
-	http://necolas.github.com/normalize.css/
-HTML5 display-role reset for older browsers 
-=============================================*/
-
-html {
-	height: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-
-body {
-	min-height: 100%;
-    background: #eee url("../img/bg-pattern.png") repeat 0 0;
-    font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
-    color: #777;
-    
-}
-
 
 article,
 aside,
@@ -100,801 +57,1168 @@ section,
 audio,
 canvas,
 video {
-	display: block;
-}
-
-
-
-/*=====================================
-Default Navigation  
-=======================================*/
-h3 a {
-    color:#fff;
-    text-decoration: none;
-}
-
-#navbar {
-    background: #275c8a;
-    height: auto;
-}
-
-#navbar h3 {
-    float: left;
-    text-transform: capitalize;
-    padding: 18px 10px;
-    color: #fff;
-    position: absolute;
-    left: 50px;
-} 
-
-/*nav ul {
-    list-style: none;
-    margin:0;
-    padding: 0;
-    width:auto;
-}*/
-
-nav a {
-  color: #fff;
   display: block;
-  padding: .975em 1.3em; 
-  text-decoration: none;
-  font-size: 1.063em;
 }
-
-nav a:hover, a.current {
-    color: #fff;
-    display:block;
-    background: #0087cc;
-    padding: .975em 1.3em; 
-}
-
-nav a:focus  {
-    color: #fff;
-    display:block;
-    background: #0087cc;
-    padding: .975em 1.3em; 
-} 
-
-
-
-/* end of navigation */
-
-/*==================================
-footer style 
-====================================*/ 
-#container-foot {
-    height: auto;
-    /*margin: 0;*/
-    background: #275c8a;
-    -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-    -webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-    box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-    padding: .975em; /* 3/4 of 1.3 */
-    color: #fff;
-    font-size:.975em; /* 3/4 x 1.3 (base font) = .975*/
-}
-
-footer h1 {
-    color: #fff;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .45);
-    padding-bottom: 10px; 
-}  
-
-#getintouch  li {
-    border:0;
-}
-/* End of footer */
-
-
-/*==============================================
-Main Content and Heading
-================================================*/
-#container-content,#container-mywork,#getintouch{
-    margin:5%;
-}
-
-
-p   {
-    font-size:1.063em;        /* 17px / 16px = 1.625px */
-	line-height:1.223;     /* 20px / 16px = 1.25  | new value for line-height = scale/ font-size (1.3/1.063 =1.223) | change the line height from 1.25                             to 1.223 - not a huge difference but it's enough*/ 
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-weight = 100; 
-}
-	
-h1 {
-    font-size:3.189em;    /* h1 should be 3 times size of the paragraph text , 3 * 1.063= */
-    line-height:1.223;
-    font-weight: 500;
-    /*word-spacing: .25em;*/
-}        /* 20px / 16px = 1.25 - same height as p */ 
-	
-h2 {
-    font-size:2.126em;     /* h1 should be 2 times size of the paragraph text , 2 * 1.063= */
-    line-height:1.223;
-}                        /* 20px / 16px = 1.25 - same height as p line-height */ 
-	
-	/* Use 'p' font-size and line-height to get the base scale - 1.063 * 1.25 = 1.3 approm. | this scale will be use for all tag size*/
-	/* scale = 1.3, 3/4 of scale =.975, 1/2 of scale= .65, 1/4 of scale = .325 */
-	
-h3 {
-    font-size:1.382em;  /* we know that h3 should be bigger then p but how much bigger. Use the scale: 1.063 * 1.3 =1.382 */
-    line-height:1.176; 
-    word-spacing: .15em;
-    letter-spacing: 0.05em;
-}   /* To get the line height use scale / h3 font-size :(1.3 / 1.382 =.94, | this is not too appropriate, let add a scale of                                1/4, that is, 0.325, 1.3+0.325 = 1.625 | finally line-height=(1.625/1.382=1.176) */
-	
-	/* for ex, #content { padding-top: .65em;
-						padding-bottom: 1.3em; } */
-h4 {
-    font-size: 1em;
-	line-height: 1.56;
-	text-transform: uppercase;
-    font-weight: 500;
-    word-spacing: .20em;
-		}
-		
-
-/* scale my work images to 100% */
-
-img {
-    max-width: 100%;
-}
-
-aside {
-    margin-top: 10%;
-}
-
-#aboutcyril h1, #container-mywork h1 {
-    color: #777;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .45);
-    padding-bottom: 10px; 
- }
-
-
-#mywork article {
-    padding-top: .65em;
-	padding-bottom: 1.3em;
-}
-
-.box {
-    padding:0;
-    border: 1px #ddd solid;
-    border-top: 0;
-    max-width: 18.4em;
-    padding-top: .45em;
-    padding-bottom:.45em;
-    background: #fff;
-    
-}
-		
-.box h4 {
-    color: #999;
-	margin-bottom: .975em; /* 3/4 of 1.3 */
-	text-align: center;
-		}
-		
-.box ul {
-	list-style: none;
-   	padding: 0;
-    border-bottom:0;
-    max-width: 18.4em;
-    margin: 0;
-}
-
-.box li {
-	list-style: none;
-	padding-top: .45em;
-    padding-bottom:.45em;
-    font-size: 1.063em;
-     border-bottom:1px #ddd solid;
-    /*max-width: 18.2em;*/
-    
-		}
-.box li:last-child {
-    border-bottom: 0;
-}
-#techskills ul > li:before {
-	content:"»";
-    /*content:"›"*/;
-	margin-right: 7px;
-    margin-left: 7px;
-}
-
-.tech-header{
-    max-width: 18.4em;
-    background: #0087cc;
-    border: 1px #0087cc solid;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    /*height: 20px;*/
-    color:#fff;
-    text-align: center;
-    padding-top: .45em;
-    padding-bottom:.45em;
-    margin: 0;
-    display:block;
-    word-spacing: .25em;
-    
-    
-}
-/*.tech-header h3{
-    padding: 10px;
-}
-*/
-.byline {
-    color: #9799a7;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-style: italic;
-    margin-bottom: 18px;
-    margin-top: 10px;
-}
-
-#download {
-    color: #006599;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-style: normal;
-    margin-top: 10px;
-}
-
-/* =========================================
-Introduction Message
-============================================*/
-
-.intro-message {
-    background-color:rgba(5,0,0,.4);
-    color: #fff;
-	position: relative;
-	margin-top:15px;
-	padding: 30px 40px; /*  intro-message text padding */  
-    
-    display: block;
-	bottom: auto;
-}
-	
-strong {
-    display: block;
-}
-
-
-/*=========================================
-My Work section
-==========================================*/
-
-#mywork figure {
-    background: #fff;
-	-moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-	-webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-	box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
-	padding: .975em; /* 3/4 of 1.3 */
-    max-width: 600px;
-}
-		
-/* Creates hover effect on My Work images */
-#mywork figure:hover{
-    -moz-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-    -webkit-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-    box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-}
-
-h3 {
-    padding-top: .975em; /* 3/4 of 1.3 */
-    padding-bottom: .65em; /* 3/4 of 1.3 */
-}
-
-
-/********************************************
-	Fluid Media
-********************************************/
-
-/* {
-    position: relative;
-}*/
 
 figure img,
 figure object,
 figure embed,
 figure video {
-    display: block;
-    max-width: 100%; 
+  display: block;
+  max-width: 100%;
+}
+
+/********************************************
+	SASS variable declaration
+********************************************/
+@font-face {
+  font-family: 'Roboto Condensed Light';
+  src: url("../fonts/robotocondensed-light-webfont.eot");
+  src: url("../fonts/robotocondensed-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotocondensed-light-webfont.woff") format("woff"), url("../fonts/robotocondensed-light-webfont.ttf") format("truetype"), url("../fonts/robotocondensed-light-webfont.svg#RobotoCondensedLight") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Condensed bold';
+  src: url("../fonts/robotocondensed-bold-webfont.eot");
+  src: url("../fonts/robotocondensed-bond-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotocondensed-bold-webfont.woff") format("woff"), url("../fonts/robotocondensed-bold-webfont.ttf") format("truetype"), url("../fonts/robotocondensed-bold-webfont.svg#RobotoCondensedLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  min-height: 100%;
+  background-color: #FAFAFA;
+  /*background: #eee url("../img/bg-pattern.png") repeat 0 0;*/
+  font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
+  color: #777;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+/*=====================================
+Default Navigation  
+=======================================*/
+h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar {
+  background: #275c8a;
+  height: auto;
+}
+#navbar h3 {
+  float: left;
+  text-transform: capitalize;
+  padding: 18px 10px;
+  color: #fff;
+  position: absolute;
+  left: 50px;
+}
+
+nav a {
+  color: #fff;
+  display: block;
+  padding: .975em 1.3em;
+  text-decoration: none;
+  font-size: 1.063em;
+  background: #275c8a;
+}
+nav a:hover {
+  color: #fff;
+  display: block;
+  padding: .975em 1.3em;
+  text-decoration: none;
+  font-size: 1.063em;
+  background: #0087cc;
+  font-weight: 600;
+}
+nav a:focus {
+  color: #fff;
+  display: block;
+  padding: .975em 1.3em;
+  text-decoration: none;
+  font-size: 1.063em;
+  background: #0087cc;
+  font-weight: 600;
+}
+
+/* end of navigation */
+.scroll {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Arapey', Georgia;
+  font-style: italic;
+  color: #333;
+  font-size: 15px;
+  padding: 8px 10px 10px 10px;
+  cursor: pointer;
+  line-height: 1.2em;
+  width: 70px;
+  text-align: center;
+  display: none;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#container-header {
+  font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
+  background: #352a38 url("../img/masthead-320x212.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  padding: 10% 0;
+  height: 22rem;
+}
+
+.intro-message {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 10rem;
+  color: #fff;
+  background-color: rgba(5, 0, 0, 0.4);
+}
+
+#intro-message h1 strong {
+  font-weight: normal;
+}
+
+/*==============================================
+Main Content and Heading
+================================================*/
+#container-content, #container-mywork, #getintouch {
+  margin: 4%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.423;
+}
+
+h1 {
+  font-size: 2.3em;
+  line-height: 1.523;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.126em;
+  line-height: 1.223;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.282em;
+  line-height: 1.176;
+  word-spacing: .15em;
+  letter-spacing: 0.05em;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-weight: 600;
+  word-spacing: .20em;
+}
+
+/* scale my work images to 100% */
+img {
+  max-width: 100%;
+}
+
+aside {
+  margin-top: 10%;
+}
+
+#aboutcyril h1, #container-mywork h1 {
+  color: #777;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+  padding-bottom: 2px;
+}
+
+#mywork article {
+  padding-top: .25em;
+  padding-bottom: 1em;
+}
+
+.tech-header {
+  max-width: 28.4em;
+  background: #0087cc;
+  border: 1px #0087cc solid;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding-top: .35em;
+  padding-bottom: .35em;
+  margin: 0;
+  display: block;
+  word-spacing: .25em;
+}
+
+.box {
+  padding: 0;
+  border: 1px #ddd solid;
+  border-top: 0;
+  max-width: 28.4em;
+  padding-top: .45em;
+  padding-bottom: .45em;
+  background: #fff;
+}
+
+.box h4 {
+  color: #999;
+  margin-bottom: .975em;
+  /* 3/4 of 1.3 */
+  text-align: center;
+}
+.box ul {
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+  border-bottom: 0;
+  margin: 0;
+}
+.box li {
+  list-style: none;
+  padding-top: .45em;
+  padding-bottom: .45em;
+  font-size: 1.063em;
+  border-bottom: 1px #ddd solid;
+}
+.box li:last-child {
+  border-bottom: 0;
+}
+
+#techskills ul > li:before {
+  content: "┬╗";
+  /*content:"ΓÇ║"*/
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+.byline {
+  color: #9799a7;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+/*=========================================
+My Work section
+==========================================*/
+#mywork figure {
+  background: #fff;
+  -moz-box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  padding: .975em;
+  /* 3/4 of 1.3 */
+  max-width: 600px;
+}
+
+/* Creates hover effect on My Work images */
+#mywork figure:hover {
+  -moz-box-shadow: 0 0 0.65em 0.325em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.65em 0.325em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.65em 0.325em rgba(0, 0, 0, 0.1);
 }
 
 /*=========================================
 Form / Basic Layout
 ==========================================*/
-
 form {
-    padding: 1.3em 0 1.3em;
+  padding: 1.3em 0 1.3em;
 }
-    
+
 form ul {
-    list-style: none;
-    padding: 1.3em 0 0;
+  list-style: none;
+  padding: 1.3em 0 0;
 }
-    
 form li {
-    padding: 0 0 .65em;
+  padding: 0 0 .65em;
 }
-	
-legend {
-    font-size: 1.382em;
-    line-height: 1.223;
+form legend {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.382em;
+  line-height: 1.223;
 }
-		    
-label {
-    display: block;
-	font-size: 1em;
-	line-height: 1.56;
-    padding: 0 0 .325em;
+form label {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  line-height: 1.56;
+  padding: 0 0 .325em;
 }
-		
-legend, label {
-    font-weight: 300;
-	text-transform: uppercase;
-	color: #fff;
-}
-	
+
 input,
 textarea {
-    display: block;
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1em;
-	line-height: 1.3;
-	font-weight: 500;
-    padding: .65em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #000;
+  display: block;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  font-weight: 500;
+  padding: .65em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
 }
-
-/**
- * 1. Remove default vertical scrollbar in IE 6/7/8/9.
- * 2. Improve readability and alignment in all browsers.
- */
 
 textarea {
-    padding-bottom: 10%;
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+  padding-bottom: 10%;
+  overflow: auto;
+  /* Remove default vertical scrollbar in IE 6/7/8/9. */
+  vertical-align: top;
+  /* Improve readability and alignment in all browsers. */
 }
 
+/*  button  variables */
 .send {
-    border: 0;
-    background: #0087cc;
-    border-radius: 4px;
-    box-shadow: 0 5px 0 #006599;
-    color: #fff;
-    cursor: pointer;
-    font: inherit;
-    margin: 0;
-    outline: 100px;
-    max-width: 20em;
-    padding: 12px 20px;
-    transition: all .1s linear;
-    vertical-align: middle;
+  border: 0;
+  background: rgba(92, 200, 92, 0.9);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 rgba(92, 184, 92, 0.75);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 100px;
+  max-width: 20em;
+  padding: 12px 20px;
+  transition: all .1s linear;
+  vertical-align: middle;
+}
+.send .send:hover {
+  box-shadow: rgba(92, 184, 92, 0.7);
+  transform: translateY(3px);
 }
 
+button {
+  border: 0;
+  background: #0087cc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 10px;
+  padding: 8px 20px;
+  transition: all .1s linear;
+}
+button button:hover {
+  box-shadow: 0 5px 0 #006599;
+  transform: translateY(3px);
+}
 
 figcaption > .tech {
-    border: 0;
-    background: rgba(92,184,92,.8);
-    border-radius: 3px;
-    color: #fff;
-    font:inherit;
-    font-size: .7em !important;
-    margin: 10px 3px 0 3px;
-    max-width: 8em;
-    padding: 3px 8px 16px 8px;
-    vertical-align: middle;
-    height: .3em;
-    display: inline-block;
-    font-weight: 600;
-    
+  border: 0;
+  background: rgba(92, 184, 92, 0.8);
+  border-radius: 3px;
+  color: #fff;
+  font: inherit;
+  font-size: .9em !important;
+  margin: 10px 3px 0 3px;
+  max-width: 8em;
+  padding: 4px 4px;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 600;
 }
 
+.wrapper {
+  padding: 0 .65em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Hide fa-icon on screen 320px to 1999px */
+.fa-hidden {
+  display: none;
+  margin: 0;
+}
+
+/*==================================
+footer style 
+====================================*/
+#container-foot {
+  height: auto;
+  background: #275c8a;
+  -moz-box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  padding: .975em;
+  /* 3/4 of 1.3 */
+  color: #fff;
+  font-size: .975em;
+  /* 3/4 x 1.3 (base font) = .975*/
+}
+
+#container-foot h1 {
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+  padding-bottom: 10px;
+}
+
+#container-foot {
+  margin-top: 60px;
+}
+
+#getintouch li {
+  border: 0;
+}
+
+/* End of footer */
 /*============================================
   Clearfix class *
 =============================================*/
- .group:before,
+.group:before,
 .group:after {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
 }
 
 .group:after {
   clear: both;
 }
-.group {*zoom: 1;
+
+.group {
+  *zoom: 1;
 }
 
 /*end of clearfix class*/
-
-
-.wrapper {
-    padding: 0 .65em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-button {
-    border: 0;
-    background: #0087cc;
-    border-radius: 4px;
-    box-shadow: 0 5px 0 #006599;
+/* *****************************************************************
+Media Queries for screen max of(420px)
+******************************************************************** */
+@media screen and (max-width: 420px) {
+  #navbar {
+    /* The height of the input checked box*/
+  }
+  #navbar input {
+    display: none;
+  }
+  #navbar label {
     color: #fff;
     cursor: pointer;
-    font: inherit;
-    margin: 10px;
-    padding: 12px 20px;
-    transition: all .1s linear;
+    display: inline-block;
+    font-size: 2em;
+    padding: 5px 9px;
+    transition: all .15s ease;
+  }
+  #navbar label:hover {
+    color: #0087cc;
+  }
+  #navbar input:checked + label {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #fff;
+  }
+  #navbar input:checked ~ nav {
+    max-height: 418px;
+  }
+
+  nav {
+    max-height: 0;
+    overflow: hidden;
+    /* Hide the flyout menu */
+    transition: all .15s ease;
+    clear: both;
+  }
+
+  nav li {
+    border-bottom: 1px solid #155a7a;
+  }
+  nav li:last-child {
+    border-bottom: 4px solid #155a7a;
+  }
+  nav li:first-child {
+    border-top: 1px solid #155a7a;
+  }
+}
+/* end of navigation Media queries */
+figcaption > .tech {
+  margin: 3px 3px 0 3px;
 }
 
-.send:hover, button:hover{
-    box-shadow: 0 2px 0 #006599;
-    background: #0087cc;
-    transform: translateY(3px);
+figure {
+  margin-bottom: 3px;
 }
 
-/* Hide fa-icon on screen 320px to 1999px */
-.fa-hidden{
+/* *****************************************************************
+Media Queries for screen greater than 420 and less than 45em (761px)
+******************************************************************** */
+@media screen and (min-width: 421px) and (max-width: 760px) {
+  html {
+    height: 100%;
+    font-size: 18px;
+  }
+
+  body {
+    font-size: 110.7%;
+  }
+
+  #navbar h3 {
+    padding: 12px 10px;
+  }
+
+  #navbar {
+    /* The height of the input checked box*/
+  }
+  #navbar input {
     display: none;
-    margin: 0;
-    
-}
-
-/* =========================================
-Media Queries Styles 
-============================================*/
-
-/* ******************************************
-Media Queries for screen less than 45em (720px)
-****************************************** */
-@media screen and (max-width: 45em) {
-  
-#container-header {
-    font-family: "Roboto Condensed light", "Helvetica Neue", Helvetica, sans-serif;
-    background: #352a38 url("../img/masthead-320x212.jpg") no-repeat top center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    padding: 10% 0;
-    height: 300px; /*added*/
-}
-            
-/* Navigation for less 720px */
-			
-#navbar input {
-    display: none;
-}
-
-#navbar label {
+  }
+  #navbar label {
     color: #fff;
     cursor: pointer;
     display: inline-block;
     font-size: 32px;
     padding: 5px 9px;
     transition: all .15s ease;
-}
-    
-#navbar label:hover {
-    color: #1b4162;
-}
-    
-#navbar input:checked + label {
+  }
+  #navbar label:hover {
+    color: #0087cc;
+  }
+  #navbar input:checked + label {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
     color: #fff;
-}
-    
-nav {
+  }
+  #navbar input:checked ~ nav {
+    max-height: 418px;
+  }
+
+  nav {
     max-height: 0;
-    overflow: hidden; /* Hide the flyout menu */
+    overflow: hidden;
+    /* Hide the flyout menu */
     transition: all .15s ease;
     clear: both;
-}
-    
-/* The height of the input checked box*/
-#navbar input:checked ~ nav {
-    max-height: 418px;
-}
+  }
 
-nav li:last-child {
-    border-bottom: 4px #155a7a solid;
-}
-    
-nav li:first-child {
-    border-top: 1px #155a7a solid;
-}
-    
-nav li {
+  nav li {
     border-bottom: 1px solid #155a7a;
-}
-    
-/* end of navigation Media queries */
-.intro-message {
-    margin-left:2px;
-    margin-right:2px;
-    margin-top: 135px;
-}
-    
-#intro-message h1 strong {
-    font-weight:normal;
-}
-h3 {
-    font-size:1.282em;  /* we know that h3 should be bigger then p but how much bigger. Use the scale: 1.063 * 1.3 =1.382 */
-    line-height:1.176; 
-    word-spacing: .15em;
-    letter-spacing: 0.05em;
-}   /* To get the line height use scale / h3 font-size :(1.3 / 1.382 =.94, | this is not too appropriate, let add a scale of                                1/4, that is, 0.325, 1.3+0.325 = 1.625 | finally line-height=(1.625/1.382=1.176) */
-	
-/*#mywork figure {
-    max-width: 25em;
-    margin: 5px 0 15px 0;
-}*/
- /*   #navbar,  #navbar nav, #navbar h3 {
-    height: 60px;
-    top: 0;
-    left: 0;
-    padding:0;
-    position: fixed;
-    right: 0;
-    width: 100%;
+  }
+  nav li:last-child {
+    border-bottom: 4px solid #155a7a;
+  }
+  nav li:first-child {
+    border-top: 1px solid #155a7a;
+  }
 
- */
-}
+  #container-header {
+    height: 25rem;
+    z-index: 10;
+  }
 
+  .intro-message {
+    background-color: rgba(5, 0, 0, 0.4);
+    color: #fff;
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 13rem;
+    padding: 5px 20px;
+    /*  intro-message text padding */
+    display: block;
+    bottom: auto;
+  }
 
-/* ******************************************
-Media Queries for screen greater than 45em (720px)
-****************************************** */
-@media screen and (min-width: 45em ) {
-    
-body {
-    font-size: 107.692307692308%;
+  .tech-header {
+    max-width: 20.4em;
+  }
+
+  .box {
+    max-width: 24.4em;
+  }
+
+  .box ul {
+    font-size: 1rem;
+  }
+
+  .name, .email {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .name {
+    padding-right: .65em;
+  }
+
+  .email {
+    padding-left: .65em;
+  }
+
+  .send {
+    width: 40%;
+  }
 }
-      
-#container-header {
+/* *********************************************************************
+Media Queries for screen greater than (760px) and less than 961px
+********************************************************************* */
+@media screen and (min-width: 761px) and (max-width: 860px) {
+  #container-header {
     font-family: "Roboto Condensed bold", "Helvetica Neue", Helvetica, sans-serif;
     background: #352a38 url("../img/masthead-906x600.jpg") no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     padding: 10% 0;
-    height: 300px; /*added*/
-}
- 
-#container-content,#container-mywork,#getintouch{
-    margin:0;
-}
+    height: 22rem;
+  }
 
-#container-content{
-    margin-top:25px;
-}
+  h1 {
+    font-size: 3em;
+    margin-left: 2%;
+  }
 
-#aboutcyril header, #aboutcyril article,#mywork,#navber, #getintouch {
-   margin: 0 2.083%;  /* 15px ÷ 720px = .018587361 * 100 */
-}  
-     
-#aboutcyril article {
+  .intro-message > p {
+    margin-left: 2%;
+  }
+
+  .intro-message {
+    margin: 0 42% 0 7.5%;
+  }
+
+  #container-content, #container-mywork, #getintouch {
+    margin: 2% 3%;
+  }
+
+  #aboutcyril, #mywork, #getintouch {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
+
+  #aboutcyril article {
     float: left;
-    width: 52.778%;    /* 380px ÷ 720px = 0.52777 * 100 */   
-}
+    width: 52.778%;
+    /* 380px ├╖ 720px = 0.52777 * 100 */
+  }
 
-#aboutcyril aside {
+  #aboutcyril aside {
     float: right;
-    width: 38.889%;    /* 280px ÷ 720px = 0.52777 * 100 */ 
-}
-    
-aside {
-    margin-top: 0;/* disable the aside content default style */
-}
-    
-#mywork article {
-    width: 33.33%; /* 220px ÷ 720px = 0.30555 * 100 */ 
+    width: 38.889%;
+    /* 280px ├╖ 720px = 0.52777 * 100 */
+  }
+
+  aside {
+    margin-top: 0;
+    /* disable the aside content default style */
+  }
+
+  #mywork article {
+    width: 33.33%;
+    /* 220px ├╖ 720px = 0.30555 * 100 */
     float: left;
-}
-    
-#container-mywork{
-    margin-bottom: 200px;
-}
- 
-h3 {
-    padding: 0;
-}
+  }
 
-#container-foot {
+  h3 {
+    padding: 0;
+  }
+
+  #container-foot {
     clear: both;
-}
- 
-nav {
+  }
+
+  /* nav bar style */
+  nav {
     padding: 0;
-}
-		
-#navbar h3 {
-    margin: 12.5px 0 10px 40px;
-    /*padding-right: 80px;*/
-}
+  }
 
-#navbar nav {
-    margin: 0 0 0 400px;
-}
+  #navbar h3 {
+    margin: 15.5px 0 5.5px 40px;
+    padding-right: 10px;
+  }
 
-#navbar label, #navbar input {
+  #navbar nav {
+    margin: 0 0 0 330px;
+  }
+
+  #navbar label, #navbar input {
     display: none;
-}
-		
-#navbar,  #navbar nav, #navbar h3 {
+  }
+
+  #navbar, #navbar nav, #navbar h3 {
     height: 60px;
     top: 0;
     left: 0;
-    padding:0;
+    padding: 0;
     position: fixed;
     right: 0;
-   
-}
-    
-#navbar {
+    z-index: 10;
+  }
+
+  #navbar {
     border-bottom: 3px #1b4162 solid;
     display: inline-block;
-}
-		
-nav ul {
-    border: 0; 
-}
-    
-nav li {
+  }
+
+  nav ul {
+    border: 0;
+  }
+
+  nav li {
     display: inline-block;
     border: 0;
-}
-    
-nav a {
+  }
+
+  nav a {
     display: inline-block;
-}
-    
-nav a:hover {
+    color: #fff;
+    padding: 1.0975em 0.5em;
+    text-decoration: none;
+    font-size: 1.0263em;
+    background: #275c8a;
+  }
+  nav a:hover {
+    font-size: 1.0263em;
     display: inline-block;
     margin-top: 0;
-}
- 
-.intro-message {
-    margin: 0 42% 0 7.5%;
-}
-.name, .email {
+    padding: 1.0975em 0.5em;
+  }
+  nav a:focus {
+    font-size: 1.0263em;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1.0975em 0.5em;
+  }
+
+  h4 {
+    font-size: 1em;
+    line-height: 2.3;
+  }
+
+  figcaption > .tech {
+    margin: 3px 3px 0 3px;
+    font-size: 0.75em !important;
+  }
+
+  figure {
+    margin-bottom: 3px;
+  }
+
+  #container-foot {
+    margin-top: 330px;
+  }
+
+  .name, .email {
     float: left;
     width: 50%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-    
-.name {
+  }
+
+  .name {
     padding-right: .65em;
-}
-    
-.email {
+  }
+
+  .email {
     padding-left: .65em;
-}
-    
-.send {
+  }
+
+  .send {
     width: 40%;
+  }
 }
-    
-figcaption > .tech {
-    font-size: .9em !important;
-    max-width: 8em;
-    padding: 3px 8px 22px 8px;
-        
-}
-    
-}
-
-
-/*=====================================================
-		Media Queries for screen wider than 60em (960px)
-=======================================================*/
-	
-@media screen and (min-width: 60em) {
-    
-body {
+/* *********************************************************************
+Media Queries for screen greater than  (860px) and lss than 1024px
+********************************************************************* */
+@media screen and (min-width: 860px) and (max-width: 1024px) {
+  body {
     font-size: 115%;
-}
-    #container-header {
+  }
+
+  #container-header {
     font-family: "Roboto Condensed bold", "Helvetica Neue", Helvetica, sans-serif;
-    background: #352a38 url("../img/masthead-960x636.jpg") no-repeat top center;
+    background: #352a38 url("../img/masthead-906x600.jpg") no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     padding: 10% 0;
-    height: 300px; /*added*/
-}
-    
-.name, .email {
+    height: 22rem;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-left: 2%;
+  }
+
+  .intro-message {
+    margin: 0 42% 0 7.5%;
+  }
+
+  .intro-message > p {
+    margin-left: 2%;
+  }
+
+  #container-content, #container-mywork, #getintouch {
+    margin: 2% 3%;
+  }
+
+  #aboutcyril, #mywork, #getintouch {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
+
+  #aboutcyril article {
+    float: left;
+    width: 52.778%;
+    /* 380px ├╖ 720px = 0.52777 * 100 */
+  }
+
+  #aboutcyril aside {
+    float: right;
+    width: 38.889%;
+    /* 280px ├╖ 720px = 0.52777 * 100 */
+  }
+
+  aside {
+    margin-top: 0;
+    /* disable the aside content default style */
+  }
+
+  #mywork article {
+    width: 33.33%;
+    /* 220px ├╖ 720px = 0.30555 * 100 */
+    float: left;
+  }
+
+  .box li {
+    font-size: 1.15em;
+  }
+
+  h3 {
+    padding: 0;
+  }
+
+  #container-foot {
+    clear: both;
+  }
+
+  /* nav bar style */
+  nav {
+    padding: 0;
+  }
+
+  #navbar h3 {
+    margin: 18.5px 0 5.5px 40px;
+    padding-right: 10px;
+  }
+
+  #navbar nav {
+    margin: 0 0 0 400px;
+  }
+
+  #navbar label, #navbar input {
+    display: none;
+  }
+
+  #navbar, #navbar nav, #navbar h3 {
+    height: 66px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+  }
+
+  #navbar {
+    border-bottom: 3px #1b4162 solid;
+    display: inline-block;
+  }
+
+  nav ul {
+    border: 0;
+  }
+  nav li {
+    display: inline-block;
+    border: 0;
+  }
+
+  nav a {
+    display: inline-block;
+    color: #fff;
+    padding: 1.0175em 0.5em;
+    text-decoration: none;
+    font-size: 1.0263em;
+    background: #275c8a;
+  }
+  nav a:hover {
+    font-size: 1.0263em;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1.0175em 0.5em;
+  }
+  nav a:focus {
+    font-size: 1.0263em;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1.0175em 0.5em;
+  }
+
+  h4 {
+    font-size: 1em;
+    line-height: 2.3;
+  }
+
+  figcaption > .tech {
+    margin: 3px 3px 0 3px;
+  }
+
+  figure {
+    margin-bottom: 3px;
+  }
+
+  #container-foot {
+    margin-top: 420px;
+  }
+
+  .name, .email {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .name, .email {
     padding-right: 1.3em;
     padding-left: 0;
     clear: both;
-}
-    
-.message textarea {
+  }
+
+  .message textarea {
     width: 50%;
-}
-    
-.send {
+  }
+
+  .send {
     width: 25%;
     margin-left: 50%;
+  }
 }
-
-
-}
-/*=====================================================
-		Media Queries for screen wider than 75em (1200px)
-=======================================================*/
-	
-@media screen and (min-width: 75em) {
-    
-body {
+/* *********************************************************************
+Media Queries for screen greater than   1024px and less than 1366px
+********************************************************************* */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  body {
     font-size: 115%;
-}
-    #container-header {
+  }
+
+  #container-header {
     font-family: "Roboto Condensed bold", "Helvetica Neue", Helvetica, sans-serif;
-    background: #352a38 url("../img/masthead-1200x796.jpg") no-repeat top center;
+    background: #352a38 url("../img/masthead-906x600.jpg") no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     padding: 10% 0;
-    height: 300px; /*added*/
-    }
-.fa-hide{
+    height: 22rem;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    margin-left: 2%;
+  }
+
+  h3 {
+    font-size: 1.482em;
+    line-height: 1.176;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.423;
+  }
+
+  .intro-message {
+    margin: 0 42% 0 7.5%;
+  }
+
+  .intro-message > p {
+    margin-left: 2%;
+  }
+
+  #container-content, #container-mywork, #getintouch {
+    margin: 2% 3%;
+  }
+
+  #aboutcyril, #mywork, #getintouch {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
+
+  #aboutcyril article {
+    float: left;
+    width: 54.778%;
+    /* 380px ├╖ 720px = 0.52777 * 100 */
+  }
+
+  #aboutcyril aside {
+    float: right;
+    width: 36.889%;
+    /* 280px ├╖ 720px = 0.52777 * 100 */
+  }
+
+  aside {
+    margin-top: 0;
+    /* disable the aside content default style */
+  }
+
+  #mywork article {
+    width: 33.33%;
+    /* 220px ├╖ 720px = 0.30555 * 100 */
+    float: left;
+  }
+
+  .box li {
+    font-size: 1.35em;
+  }
+
+  h3 {
+    padding: 0;
+  }
+
+  #container-foot {
+    clear: both;
+  }
+
+  /* nav bar style */
+  nav {
+    padding: 0;
+  }
+
+  #navbar h3 {
+    margin: 15.5px 0 5.5px 40px;
+    padding-right: 10px;
+  }
+
+  #navbar nav {
+    margin: 0 0 0 500px;
+  }
+  #navbar label {
     display: none;
-    
-   
-}
-    /*#aboutcyril header, #aboutcyril article,#mywork article ,#container-mywork, #container-content{
-  /* margin: 0 2.5%;   15px ÷ 720px = .018587361 * 100 */
-}  
-     
-/*#navbar,  #navbar nav, #navbar h3 {
-    height: 60px;
+  }
+  #navbar input {
+    display: none;
+  }
+
+  #navbar, #navbar nav, #navbar h3 {
+    height: 68px;
     top: 0;
     left: 0;
-    padding:0;
+    padding: 0;
     position: fixed;
     right: 0;
-    width: 100%;
-}*/
-.fa-visible {
-    float:right;
-    display:inline-block;
-    cursor: pointer;
-    margin: 10px;
-    
-    
-    visibility: visible;
-   /* margin: 60px;*/
-    padding-right: 30px;
-    /*z-index: 2;*/
-    
+    z-index: 10;
+  }
 
+  #navbar {
+    border-bottom: 3px #1b4162 solid;
+    display: inline-block;
+  }
+
+  nav ul {
+    border: 0;
+  }
+  nav li {
+    display: inline-block;
+    border: 0;
+  }
+
+  nav a {
+    display: inline-block;
+    color: #fff;
+    padding: 1.0275em 0.7em;
+    text-decoration: none;
+    font-size: 1.0263em;
+    background: #275c8a;
+  }
+  nav a:hover {
+    font-size: 1.0263em;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1.0275em 0.7em;
+  }
+  nav a:focus {
+    font-size: 1.0263em;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1.0275em 0.7em;
+  }
+
+  h4 {
+    font-size: 1.2m;
+    line-height: 2.3;
+  }
+
+  figcaption > .tech {
+    margin: 5px 3px 0 3px;
+    font-size: 1em !important;
+  }
+
+  figure {
+    margin-bottom: 3px;
+  }
+
+  #container-foot {
+    margin-top: 520px;
+  }
+
+  .name, .email {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .name, .email {
+    padding-right: 1.3em;
+    padding-left: 0;
+    clear: both;
+  }
+
+  .message textarea {
+    width: 50%;
+  }
+
+  .send {
+    width: 25%;
+    margin-left: 50%;
+  }
 }
-  /* ul.social>li>a {
-display: inline-block;
-font-size: 18px;
-line-height: 36px;
-width: 36px;
-height: 36px;
-border-radius: 36px;
-background-color: rgba(22,52,78,0.1);
-color: #fff;
-margin: 0 3px 3px 0;
-position: relative;
-}*/
-    .intro-message {
-    max-width: 800px;
-}
-	
-}
+
+/*# sourceMappingURL=main.css.map */
