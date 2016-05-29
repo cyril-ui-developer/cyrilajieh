@@ -1,0 +1,1 @@
+$(document).ready(function(){var today=new Date();var year=today.getFullYear();var el=document.getElementById('pageDate');el.innerHTML='<p> &copy Cyril Ajieh, '+year+'. All Rights Reserved. </p>';});
